@@ -6,6 +6,12 @@ import styles from "../styles/Home.module.scss";
 export default function Home() {
   return (
     <div className="globalWrap">
+      {/* <rootHead title="Home"/> */}
+      <Head>
+        <title>Home | Ogbonna Sunday</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Ogbonna Sunday's Portfolio Home page" />
+      </Head>
       <div className={styles.container}>
         <div className={styles.me}>
           <small className={styles.greetings}>Hi, I’m</small>
@@ -17,7 +23,7 @@ export default function Home() {
 
           <Button name="About Me" path="/about" />
         </div>
-        <figure className={styles.vector}>
+        <figure className={styles.vector} title="Developer Illustration">
           <Image
             className={styles.vectorIllustration}
             src="https://res.cloudinary.com/smithtech/image/upload/v1643625396/portfolio-imges/vector_c5z0m9.png"

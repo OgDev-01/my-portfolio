@@ -29,7 +29,7 @@ export default function Project({ data }) {
           <p>{description}</p>
         </div>
         <Link href={url} passHref>
-          <a className={styles.link}>
+          <a className={styles.link} title="Visit Page Now">
             <BiLinkExternal />
           </a>
         </Link>

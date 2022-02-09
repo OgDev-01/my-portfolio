@@ -5,7 +5,7 @@
   width: 85%;
   margin-inline: auto;
   padding-top: 180px;
-  padding-bottom: 80px ;
+  padding-bottom: 80px;
 
   p {
     font-size: 1.375em;
@@ -96,6 +96,7 @@
     background-color: $secondary;
     margin-left: 4px;
     margin-top: 5px;
+    color: $primaryBg;
 
     @media screen and(min-width: 44em) {
       font-size: 0.9em;

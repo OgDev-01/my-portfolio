@@ -7,7 +7,7 @@ export default function MainHeader({ handleMenu }) {
     <header>
       <div className={styles.topHead}>
         <Link href="/" passHref className={styles.logo}>
-          <a>
+          <a title="Brand logo">
             <Image
               className={styles.logoImage}
               src={
