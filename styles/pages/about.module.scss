@@ -1,0 +1,79 @@
+@import "../theme.module.scss";
+
+.sectionOne {
+  width: 85%;
+  height: auto;
+  //   border: 1px solid $primaryText;
+  margin-inline: auto;
+  background-color: $primaryBg;
+  padding-top: 200px;
+  padding-bottom: 50px;
+}
+.aboutMe {
+  margin-top: 20px;
+}
+.title {
+  font-size: 1.375em;
+}
+.desc {
+  line-height: 160.7%;
+  padding-right: 20px;
+  margin-top: 40px;
+  font-size: 1.125em;
+  line-height: 160.7%;
+}
+.caption {
+  margin-top: 50px;
+  padding-right: 20px;
+  font-size: 1.7625em;
+  line-height: 155.7%;
+  font-weight: bold;
+}
+
+.scroll {
+  display: block;
+  text-align: right;
+  padding: 0 20px;
+  font-size: 1.4625em;
+  margin-top: 130px;
+}
+
+.skills {
+  width: 85%;
+  height: auto;
+  margin-inline: auto;
+  margin-top: 100px;
+  padding-bottom: 50px;
+
+  h2 {
+    font-size: 1.5625em;
+    line-height: 160.7%;
+  }
+}
+
+.listSkills {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  ul {
+    // background-color: red;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0;
+
+    &:nth-child(2) {
+      margin-left: 30px;
+    }
+    li {
+      list-style: none;
+      padding: {
+        top: 25px;
+      }
+      font-size: 1.125em;
+    }
+  }
+}

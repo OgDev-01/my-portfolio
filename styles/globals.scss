@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Poppins&display=swap");
+@import "./theme.module";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Play", sans-serif;
+  scroll-behavior: smooth;
+}
+.rootWrapper {
+  background: $primaryBg;
+  color: $primaryText;
+  transition: all 0.5s;
+  height: auto;
+}
+.container {
+  background-color: $primaryBg;
+}
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "poppins", sans-serif;
+}
+h2 {
+  font-family: "Play", sans-serif;
+}
+p {
+  font-size: 1.125em;
+}
+
+a {
+  color: $primaryText;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+.toggleWrap {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.342);
+  right: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  z-index: 1000;
+  background-color: $secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.themeIcon {
+  width: 28px;
+  height: 28px;
+  // color: $primaryBg;
+}

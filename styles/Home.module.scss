@@ -1,0 +1,120 @@
+@import "./theme.module";
+.container {
+  width: 85%;
+  max-width: 375px;
+  margin-inline: auto;
+  overflow: hidden;
+  height: 100vh;
+  @media screen and (min-width: 44em) {
+    max-width: 1280px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.me {
+  height: 50vh;
+  width: 100%;
+
+  @media screen and(min-width: 44em) {
+    width: 45%;
+  }
+}
+.greetings {
+  font-size: 1.2em;
+}
+
+.name {
+  font-size: 2.5em;
+  line-height: 138%;
+  letter-spacing: 2.2px;
+}
+.desc {
+  font-size: 1.125em;
+  line-height: 160.7%;
+  opacity: 0.8;
+}
+
+.button {
+  padding: 0.8em 1.8em;
+  width: fit-content;
+  margin-top: 70px;
+  border: 1px solid #ffffff8c;
+  font-size: 1.1875em;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 500%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: $secondary;
+    transition: 0.5s ease;
+    display: block;
+    z-index: -1;
+  }
+  &:hover::before {
+    width: 105%;
+  }
+  &:hover {
+    color: #111;
+    border: none;
+  }
+}
+
+.arrow {
+  margin-left: 30px;
+  font-size: 25px;
+  animation: slide-right 0.5s ease-in infinite alternate both;
+}
+
+.vector {
+  width: 465px;
+  max-width: 465px;
+
+  height: 484px;
+  max-height: 484px;
+  display: none;
+  position: relative;
+  @media screen and(min-width: 44em) {
+    // background-color: red;
+    display: flex;
+  }
+}
+
+.vectorIllustration{
+    width: 100%;
+    height: 100%;
+    position: relative !important;
+}
+
+// Button animation keyframes
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(40px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(15px);
+  }
+}
