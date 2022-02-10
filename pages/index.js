@@ -22,7 +22,9 @@ export default function Home() {
       <div className={styles.container}>
         <div className={styles.me}>
           <small className={styles.greetings}>Hi, I’m</small>
-          <h2 className={styles.name}>Ogbonna Sunday</h2>
+          <h2 className={styles.name}>
+            Ogbonna <br /> Sunday
+          </h2>
           <p className={styles.desc}>
             Frontend Engineer passionate about delivering blazingly fast and
             optimized web applications.
