@@ -30,6 +30,7 @@ export default function Nav({ handleMenu, menuOpen }) {
                       className={
                         router.pathname == link.url ? styles.active : ""
                       }
+                      onClick={handleMenu}
                     >
                       {link.name}
                     </a>
