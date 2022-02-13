@@ -21,10 +21,25 @@ const aboutVariant = {
 const childVariant = {
   visible: {
     opacity: 1,
+    x: 0,
+    transition: {
+      type: "tween",
+      duration: 0.3,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    x: -30,
+  },
+};
+
+const childrenVariant = {
+  visible: {
+    opacity: 1,
     y: 0,
     transition: {
       type: "tween",
-      duration: 0.5,
+      duration: 0.3,
     },
   },
   hidden: {
@@ -55,7 +70,7 @@ export default function about() {
             I’m Ogbonna Sunday, a software engineer based in Nigeria. I enjoy
             creating optimized and interactive web applications.
           </motion.p>
-          <motion.h2 variants={childVariant} className={styles.caption}>
+          <motion.h2 variants={childrenVariant} className={styles.caption}>
             When it comes to the web, I Flourish 😎
           </motion.h2>
 
