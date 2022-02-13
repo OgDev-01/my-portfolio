@@ -3,6 +3,35 @@ import Image from "next/image";
 import Button from "../components/utils/Button";
 import styles from "../styles/Home.module.scss";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
+
+const home = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+    },
+  },
+  hidden: {
+    opacity: 0,
+  },
+};
+
+const descriptionVariant = {
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "tween",
+      duration: 0.5,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+};
 
 export default function Home() {
   const isDesktopOrLaptop = useMediaQuery({
@@ -20,18 +49,28 @@ export default function Home() {
         />
       </Head>
       <div className={styles.container}>
-        <div className={styles.me}>
+        <motion.div
+          className={styles.me}
+          variants={home}
+          initial="hidden"
+          animate="visible"
+        >
           <small className={styles.greetings}>Hi, I’m</small>
-          <h2 className={styles.name}>
+          <motion.h2 animate={{ opacity: 1, x: 0 }} className={styles.name}>
             Ogbonna {isDesktopOrLaptop ? <br /> : ""} Sunday
-          </h2>
-          <p className={styles.desc}>
+          </motion.h2>
+          <motion.p
+            variants={descriptionVariant}
+            initial="hidden"
+            animate="visible"
+            className={styles.desc}
+          >
             Frontend Engineer passionate about delivering blazingly fast and
             optimized web applications.
-          </p>
+          </motion.p>
 
           <Button name="About Me" path="/about" />
-        </div>
+        </motion.div>
         <figure className={styles.vector} title="Developer Illustration">
           {isDesktopOrLaptop ? (
             <Image
