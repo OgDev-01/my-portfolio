@@ -2,43 +2,83 @@ import React from "react";
 import Skills from "../components/utils/skills";
 import styles from "../styles/pages/about.module.scss";
 import Button from "../components/utils/Button";
-import { rootHead } from ".";
+import { motion } from "framer-motion";
 import Head from "next/head";
 
+const aboutVariant = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+    },
+  },
+  hidden: {
+    opacity: 0,
+  },
+};
+
+const childVariant = {
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "tween",
+      duration: 0.5,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+};
 export default function about() {
   return (
     <>
       <Head>
         <title>About Me | Ogbonna Sunday</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="Ogbonna Sunday's Portfolio About page" />
+        <meta
+          name="description"
+          content="Ogbonna Sunday's Portfolio About page"
+        />
       </Head>
       <section className={styles.sectionOne}>
-        <div className={styles.aboutMe}>
-          <h1 className={styles.title}>About Me.</h1>
-          <p className={styles.desc}>
+        <motion.div
+          variants={aboutVariant}
+          initial="hidden"
+          animate="visible"
+          className={styles.aboutMe}
+        >
+          <motion.h1 className={styles.title}>About Me.</motion.h1>
+          <motion.p variants={childVariant} className={styles.desc}>
             I’m Ogbonna Sunday, a software engineer based in Nigeria. I enjoy
             creating optimized and interactive web applications.
-          </p>
-          <h2 className={styles.caption}>
+          </motion.p>
+          <motion.h2 variants={childVariant} className={styles.caption}>
             When it comes to the web, I Flourish 😎
-          </h2>
+          </motion.h2>
 
-          <a
+          <motion.a
             id="tech"
             title="Click to scroll"
             className={styles.scroll}
             href="#tech"
+            variants={childVariant}
           >
             scroll
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </section>
       <section className={styles.skills}>
         <h2>Technologies i’ve been working with recently</h2>
         <Skills />
 
-        <Button className={styles.btn} name={"View Previous Works"} path={"/works"} />
+        <Button
+          className={styles.btn}
+          name={"View Previous Works"}
+          path={"/works"}
+        />
       </section>
     </>
   );
