@@ -16,7 +16,7 @@
     }
   }
 }
-.input{
+.input {
   margin-top: 200px;
 }
 .title {
@@ -75,6 +75,11 @@
   background: rgba(0, 0, 0, 0.404);
   height: 100%;
   transition: all 0.5s;
+  opacity: 0;
+
+  @media screen and(min-width: 44em) {
+    opacity: 1;
+  }
 
   &:hover {
     opacity: 0;
