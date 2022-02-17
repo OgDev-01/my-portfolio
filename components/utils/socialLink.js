@@ -33,7 +33,7 @@ export default function SocialLink() {
     <div className={styles.socialWrap}>
       {socials.map((social) => (
         <Link key={social.name} href={social.url} passHref>
-          <a>{social.icon}</a>
+          <a title={social.name}>{social.icon}</a>
         </Link>
       ))}
     </div>

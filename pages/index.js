@@ -10,7 +10,7 @@ const home = {
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.3,
+      staggerChildren: 0.,
     },
   },
   hidden: {
@@ -33,7 +33,7 @@ const descriptionVariant = {
   },
 };
 
-export default function Home() {
+export default function Home({theme}) {
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 44em)",
   });

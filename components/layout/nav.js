@@ -20,7 +20,7 @@ export default function Nav({ handleMenu, menuOpen }) {
         <div className={styles.navWrap}>
           <nav className={styles.navMenu}>
             <div className={styles.closeIcon}>
-              <HiX className={styles.close} onClick={handleMenu} />
+             <span>close</span> <HiX className={styles.close} onClick={handleMenu} />
             </div>
             <ul className={styles.listItems}>
               {navLinks.map((link) => (

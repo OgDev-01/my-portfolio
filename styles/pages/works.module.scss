@@ -44,7 +44,10 @@
   width: 315px;
   max-width: 315px;
   margin-top: 90px;
-
+  box-shadow: 4px 5px 71px -41px rgba(0, 0, 0, 0.41);
+  -webkit-box-shadow: 4px 5px 71px -41px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 4px 5px 71px -41px rgba(0, 0, 0, 0.41);
+  border: 1px solid rgba(0, 0, 0, 0.123);
   @media screen and(min-width: 44em) {
     width: 45%;
     max-width: 515px;
@@ -117,6 +120,7 @@
   align-items: center;
   padding-left: 8px;
   padding-right: 8px;
+  border-top: 2px solid rgba(0, 0, 0, 0.158);
   div {
     width: 65%;
   }

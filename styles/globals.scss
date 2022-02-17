@@ -1,22 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Poppins&display=swap");
 @import "./theme.module";
 
+:root {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --link-color: #ffffff;
+  --secondary-color: #ff9a0d;
+  --button-border: #ffffff8c;
+}
+
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #000000e7;
+  --secondary-color: #ff9a0d;
+  --link-color: #000000;
+  --button-border: #00000025;
+}
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Play", sans-serif;
   scroll-behavior: smooth;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
+
 .rootWrapper {
-  background: $primaryBg;
-  color: $primaryText;
-  transition: all 0.5s;
+  color: var(--text-color);
   height: auto;
+  background-color: var(--background-color);
+  transition: all 0.5s;
 }
-.container {
-  background-color: $primaryBg;
-}
+
 h1,
 h3,
 h4,
@@ -32,7 +48,7 @@ p {
 }
 
 a {
-  color: $primaryText;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -54,7 +70,7 @@ a {
   transform: translateY(-50%);
   top: 50%;
   z-index: 1000;
-  background-color: $secondary;
+  background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,5 +79,4 @@ a {
 .themeIcon {
   width: 28px;
   height: 28px;
-  // color: $primaryBg;
 }

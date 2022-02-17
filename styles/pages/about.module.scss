@@ -3,9 +3,8 @@
 .sectionOne {
   width: 85%;
   height: auto;
-  //   border: 1px solid $primaryText;
   margin-inline: auto;
-  background-color: $primaryBg;
+  background-color: var(--background-color);
   padding-top: 200px;
   padding-bottom: 50px;
 }
@@ -17,7 +16,7 @@
     margin-inline: auto;
     height: 550px;
     max-width: 1084px;
-    border: 1px solid rgba(255, 255, 255, 0.459);
+    border: 1px solid var(--button-border);
     margin-top: -40px;
     text-align: center;
     padding-top: 50px;

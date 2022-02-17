@@ -1,10 +1,14 @@
 import React from "react";
-import { BsFillSunFill } from "react-icons/bs";
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ switchTheme, theme }) {
   return (
-    <div className="toggleWrap" title="Toggle theme">
-      <BsFillSunFill className="themeIcon" />
+    <div className="toggleWrap" title="Toggle theme" onClick={switchTheme}>
+      {theme === "dark" ? (
+        <BsFillSunFill className="themeIcon" />
+      ) : (
+        <BsFillMoonFill className="themeIcon" />
+      )}
     </div>
   );
 }
