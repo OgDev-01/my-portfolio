@@ -17,6 +17,7 @@ export default function MainHeader({ handleMenu }) {
               height="100%"
               objectFit="contain"
               alt="Brand logo"
+              priority={true}
             />
           </a>
         </Link>

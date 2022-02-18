@@ -1,32 +1,37 @@
 import MainHeader from "./main-header";
-import Nav from "./nav";
-import { useState } from "react";
+import dynamic from "next/dynamic";
+const Nav = dynamic(() => import("./nav"));
+
+import { useState, useEffect } from "react";
 import ThemeToggle from "../utils/themeToggle";
 import useLocalStorage from "use-local-storage";
 
-
 function Layout(props) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const defaultDark = "dark";
+  const [defaultTheme, setDefaultTheme] = useState("");
   const [theme, setTheme] = useLocalStorage(
     "theme",
-    defaultDark ? "dark" : "light"
+    defaultTheme ? "light" : "dark"
   );
 
-  const dayLightHour = new Date().getHours();
-
   const switchTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+    const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
   };
 
-  const handleDaylightSwitch = () => {
+  useEffect(() => {
+    const defaultDark = window.matchMedia(
+      "(prefers-color-scheme: light)"
+    ).matches;
+    setDefaultTheme(defaultDark);
+    const dayLightHour = new Date().getHours();
+
     if (dayLightHour <= 7 || dayLightHour >= 19) {
-      setTheme(defaultDark);
+      setTheme("dark");
     } else {
       setTheme("light");
     }
-  };
+  }, [setTheme]);
 
   const handleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -38,7 +43,7 @@ function Layout(props) {
       <Nav handleMenu={handleMenu} menuOpen={menuOpen} />
       <div className="container">
         <MainHeader handleMenu={handleMenu} />
-        <main theme={theme} >{props.children}</main>
+        <main>{props.children}</main>
       </div>
     </div>
   );
