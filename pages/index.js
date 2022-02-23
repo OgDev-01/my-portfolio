@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import Button from "../components/utils/Button";
 import styles from "../styles/Home.module.scss";
+import Button from "../components/utils/Button";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 
@@ -10,7 +10,7 @@ const home = {
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.,
+      staggerChildren: 0,
     },
   },
   hidden: {
@@ -33,7 +33,7 @@ const descriptionVariant = {
   },
 };
 
-export default function Home({theme}) {
+export default function Home({ theme }) {
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 44em)",
   });

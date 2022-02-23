@@ -2,36 +2,18 @@ import MainHeader from "./main-header";
 import dynamic from "next/dynamic";
 const Nav = dynamic(() => import("./nav"));
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ThemeToggle from "../utils/themeToggle";
-import useLocalStorage from "use-local-storage";
 
 function Layout(props) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [defaultTheme, setDefaultTheme] = useState("");
-  const [theme, setTheme] = useLocalStorage(
-    "theme",
-    defaultTheme ? "light" : "dark"
-  );
+
+  const [theme, setTheme] = useState("light");
 
   const switchTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
   };
-
-  useEffect(() => {
-    const defaultDark = window.matchMedia(
-      "(prefers-color-scheme: light)"
-    ).matches;
-    setDefaultTheme(defaultDark);
-    const dayLightHour = new Date().getHours();
-
-    if (dayLightHour <= 7 || dayLightHour >= 19) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  }, [setTheme]);
 
   const handleMenu = () => {
     setMenuOpen((prev) => !prev);
