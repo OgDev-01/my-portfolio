@@ -21,7 +21,6 @@ export default function Project({ data }) {
             src={image.data.attributes.url}
             layout="fill"
             alt={image.data.attributes.alternativeText}
-            priority={true}
           />
         ) : (
           <Image
@@ -31,7 +30,6 @@ export default function Project({ data }) {
             src={image.data.attributes.formats.small.url}
             layout="fill"
             alt={image.data.attributes.alternativeText}
-            priority={true}
           />
         )}
         <div className={styles.overlay}></div>
