@@ -13,7 +13,7 @@ function Layout(props) {
     if (daylight <= 7 || daylight >= 19) {
       setTheme("dark");
     }
-  });
+  }, [setTheme]);
 
   const switchTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";

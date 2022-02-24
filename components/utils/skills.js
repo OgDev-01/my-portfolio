@@ -3,12 +3,12 @@ import styles from "../../styles/pages/about.module.scss";
 export default function Skills() {
   const firstSkills = [
     "Javascript(ES6+)",
+    "TypeScript",
     "ReactJs",
     "Redux",
     "NextJs",
     "NodeJs",
     "Express.js",
-    "Strapi",
     "Contentful",
   ];
   const secondSkills = [
@@ -31,23 +31,30 @@ export default function Skills() {
     "MongoDb",
     "Netlify",
     "Heroku",
+    "Strapi",
   ];
 
   return (
     <div className={styles.listSkills}>
       <ul>
         {firstSkills.map((skill) => (
-          <li key={skill}>{skill}</li>
+          <li key={skill} title={skill}>
+            {skill}
+          </li>
         ))}
       </ul>
       <ul>
         {secondSkills.map((skill) => (
-          <li key={skill}>{skill}</li>
+          <li key={skill} title={skill}>
+            {skill}
+          </li>
         ))}
       </ul>
       <ul>
         {thirdSkills.map((skill) => (
-          <li key={skill}>{skill}</li>
+          <li key={skill} title={skill}>
+            {skill}
+          </li>
         ))}
       </ul>
     </div>
