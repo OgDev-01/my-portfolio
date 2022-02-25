@@ -18,10 +18,7 @@ export default function works({ projects }) {
           content="Ogbonna Sunday's Portfolio Works page"
         />
 
-        <meta
-          name="description"
-          content="Ogbonna Sunday's Portfolio Works page"
-        />
+      <meta name="author" content="Ogbonna Sunday" />
       </Head>
       <div className={styles.worksWrap}>
         <div className={styles.optimizedImage}>
