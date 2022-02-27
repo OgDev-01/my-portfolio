@@ -6,7 +6,11 @@ import styles from "../../styles/headers/nav.module.scss";
 
 export default function SocialLink() {
   const socials = [
-    { name: "twitter", url: "", icon: <FaTwitter className={styles.tIcon} /> },
+    {
+      name: "twitter",
+      url: "https://twitter.com/O_sunday15",
+      icon: <FaTwitter className={styles.tIcon} />,
+    },
     {
       name: "github",
       url: "https://github.com/SunGoldTech",
@@ -14,17 +18,17 @@ export default function SocialLink() {
     },
     {
       name: "linkedin",
-      url: "",
+      url: "https://www.linkedin.com/in/ogbonna-sunday-06a86116b/",
       icon: <FaLinkedinIn className={styles.lIcon} />,
     },
     {
       name: "instagram",
-      url: "",
+      url: "https://www.instagram.com/ogbonna1502/",
       icon: <RiInstagramFill className={styles.iIcon} />,
     },
     {
       name: "dribbble",
-      url: "",
+      url: "https://dribbble.com/Oliviamegan11",
       icon: <RiDribbbleLine className={styles.dIcon} />,
     },
   ];
