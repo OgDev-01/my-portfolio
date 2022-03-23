@@ -3,11 +3,10 @@ import styles from "../styles/pages/contact.module.scss";
 import Link from "next/link";
 import { Socials } from "../components/utils/socialLink";
 export default function Contact() {
-  console.log(Socials);
   return (
     <div className="aboutRoot">
       <div className={styles.aboutWrap}>
-        <h1 className={styles.heading}>CONTACT</h1>
+        <h1 className={styles.heading}>GET IN TOUCH</h1>
         <p className={styles.description}>Wanna Reach out to me??</p>
 
         <Link href="mailto:oliviamegan11@gmail.com" passHref>
