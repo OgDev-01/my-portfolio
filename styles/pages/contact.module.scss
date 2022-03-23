@@ -1,0 +1,80 @@
+@import "../theme.module.scss";
+
+.aboutWrap {
+  height: auto;
+  width: 85%;
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button {
+  padding: 0.8em 1.8em;
+  width: fit-content;
+  margin-top: 20px;
+  border: 1px solid var(--button-border);
+  font-size: 1.1875em;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+  z-index: 1;
+
+  @media screen and(min-width: 44em) {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 500%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: $secondary;
+    transition: 0.5s ease;
+    display: block;
+    z-index: -1;
+  }
+  &:hover::before {
+    width: 105%;
+  }
+  &:hover {
+    color: #111;
+    border: none;
+  }
+}
+.heading {
+  text-align: center;
+  @media screen and(min-width: 44em) {
+    font-size: 2.8125em;
+  }
+}
+.description {
+  text-align: center;
+  margin-top: -1px;
+  @media screen and(min-width: 44em) {
+    font-size: 1.625em;
+    line-height: 160.7%;
+    margin-top: -10px;
+  }
+}
+.or {
+  font-size: 2em;
+  margin-top: 30px;
+}
+.socialWrap {
+  width: 16.375em;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--social-bg);
+  padding: 15px 15px;
+  margin-top: 30px;
+
+  @media screen and(min-width:44em) {
+    width: 30.75em;
+  }
+}

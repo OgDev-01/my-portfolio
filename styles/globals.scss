@@ -6,6 +6,9 @@
   --link-color: #ffffff;
   --secondary-color: #ff9a0d;
   --button-border: #ffffff8c;
+  --toggle-bg: rgba(255, 255, 255, 0.171);
+  --toggle-icon: #f79409;
+  --social-color: #ffffffe8;
 }
 
 [data-theme="light"] {
@@ -15,6 +18,10 @@
   --secondary-color: #ff9a0d;
   --link-color: #000000;
   --button-border: #00000025;
+  --social-color: #000000;
+  --toggle-icon: #000000;
+
+  --toggle-bg: rgba(0, 0, 0, 0.11);
 }
 html,
 body {
@@ -32,7 +39,12 @@ body {
   background-color: var(--background-color);
   transition: all 0.5s;
 }
-
+.aboutRoot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 h1,
 h3,
 h4,
@@ -70,13 +82,16 @@ a {
   transform: translateY(-50%);
   top: 50%;
   z-index: 1000;
-  background-color: var(--secondary-color);
+  // background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
+  border: 1px solid var(--toggle-bg);
 }
 
 .themeIcon {
   width: 28px;
   height: 28px;
+  color: var(--toggle-icon);
 }
